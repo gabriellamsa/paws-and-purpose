@@ -1,4 +1,5 @@
 import Benefits from "@/components/benefits/Benefits";
+import DogCarousel from "@/components/gallery/DogCarousel";
 import Hero from "@/components/hero/Hero";
 import Navbar from "@/components/navbar/Navbar";
 import Reasons from "@/components/reasons/Reasons";
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero />
         <Reasons />
         <Benefits />
+        <DogCarousel />
       </main>
     </>
   );
