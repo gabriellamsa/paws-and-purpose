@@ -1,60 +1,79 @@
-# 🐶 Why We Deserve a Dog — Landing Page
+# 🐾 Paws & Purpose
 
-A responsive and modern landing page built with **Next.js 15**, **React 19**, **Tailwind CSS 4**, and **TypeScript**, showcasing all the reasons why my boyfriend and I should get a dog. This project is part of my personal portfolio and highlights clean UI, component architecture, and frontend responsiveness.
+<div align="center">
 
-## 🚀 Tech Stack
+![Next.js](https://img.shields.io/badge/Next.js-15.3.1-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-19.0.0-blue?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0.0-38B2AC?style=for-the-badge&logo=tailwind-css)
 
-- **Next.js 15**
-- **React 19**
-- **Tailwind CSS 4**
-- **TypeScript**
-- **Lucide Icons**
-- **Framer Motion**
+</div>
 
-## 🧠 Features
+## ✨ Overview
 
-- Fully responsive layout
-- Smooth animations with Framer Motion
-- Mobile-friendly navigation
-- Clean and modular component design
+A modern, responsive landing page built with cutting-edge technologies to showcase why adopting a dog would be the perfect addition to our lives. This project demonstrates clean UI design, component architecture, and frontend best practices.
 
-## 📦 Getting Started
+## 🛠️ Tech Stack
 
-1. Clone the repository:
+- **Framework:** Next.js 15
+- **UI Library:** React 19
+- **Styling:** Tailwind CSS 4
+- **Type Safety:** TypeScript
+- **Animations:** Framer Motion
+- **Icons:** Lucide Icons
 
-```bash
-git clone https://github.com/yourusername/nextjs-product-landing.git
-```
+## 🎨 Features
 
-2. Install dependencies:
+- 🎯 Fully responsive design
+- ✨ Smooth animations and transitions
+- 📱 Mobile-first approach
+- 🧩 Modular component architecture
+- 🚀 Optimized performance
+- 🎭 Interactive UI elements
 
-```bash
-npm install
-```
+## 🚀 Quick Start
 
-3. Run the development server:
+1. **Clone the repository**
 
-```bash
-npm run dev
-```
+   ```bash
+   git clone https://github.com/yourusername/paws-and-purpose.git
+   ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+2. **Install dependencies**
 
-## 📁 Structure
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Open** [http://localhost:3000](http://localhost:3000) in your browser
+
+## 📁 Project Structure
 
 ```
 src/
-├─ components/
-│ ├─ hero/
-│ │ └─ Hero.tsx
-│ ├─ navbar/
-│ │ ├─ Navbar.tsx
-│ │ ├─ ResponsiveNavbar.tsx
-│ │ └─ MobileNav.tsx
+├── components/     # Reusable UI components
+├── public/        # Static assets
+└── styles/        # Global styles and Tailwind config
 ```
 
-## 🎯 Goal
+## 🎯 Project Goals
 
-To create a convincing, fun, and professional landing page that argues — in style — why a dog would be the perfect addition to our lives.
+- Create an engaging and professional landing page
+- Demonstrate modern web development practices
+- Showcase the benefits of pet adoption
+- Implement smooth animations and transitions
+- Ensure optimal performance across devices
 
-Made with ❤️ by Gabriella Andrade
+---
+
+<div align="center">
+
+Made with ❤️ by [Gabriella Andrade](https://github.com/gabriellamsa)
+
+</div>
