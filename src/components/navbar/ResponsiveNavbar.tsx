@@ -1,3 +1,7 @@
+"use client";
+
+import SmoothScrollLink from "@/components/helper/SmoothScrollLink";
+
 const links = [
   { href: "#reasons", label: "Reasons" },
   { href: "#benefits", label: "Benefits" },
@@ -10,12 +14,12 @@ export default function ResponsiveNavbar() {
     <ul className="flex space-x-6 text-gray-700 font-medium">
       {links.map((link) => (
         <li key={link.href}>
-          <a
-            href={link.href}
+          <SmoothScrollLink
+            to={link.href}
             className="hover:text-pink-600 transition-colors duration-200"
           >
             {link.label}
-          </a>
+          </SmoothScrollLink>
         </li>
       ))}
     </ul>
