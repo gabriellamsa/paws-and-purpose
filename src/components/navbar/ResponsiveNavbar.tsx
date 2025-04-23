@@ -1,7 +1,8 @@
 const links = [
   { href: "#reasons", label: "Reasons" },
   { href: "#benefits", label: "Benefits" },
-  { href: "gallery", label: "Cutiness" },
+  { href: "#gallery", label: "Gallery" },
+  { href: "#testimonials", label: "Testimonials" },
 ];
 
 export default function ResponsiveNavbar() {

@@ -37,7 +37,7 @@ export default function DogCarousel() {
   };
 
   return (
-    <section className="w-full bg-white">
+    <section id="gallery" className="w-full bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <h2 className="text-4xl font-extrabold text-center text-gray-900 mb-16">
           Check out These Adorable Dogs

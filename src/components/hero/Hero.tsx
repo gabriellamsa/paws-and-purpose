@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -24,6 +25,26 @@ export default function Hero() {
         endless cuddles. And guess what? I'm going to show you exactly why this
         makes all the sense in the world.
       </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.8 }}
+        className="flex flex-col sm:flex-row gap-4 justify-center mt-8"
+      >
+        <Link
+          href="#benefits"
+          className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 transition-colors"
+        >
+          Discover Benefits
+        </Link>
+        <Link
+          href="#gallery"
+          className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-pink-600 bg-white hover:bg-gray-50 transition-colors"
+        >
+          View Gallery
+        </Link>
+      </motion.div>
     </section>
   );
 }
