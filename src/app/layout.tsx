@@ -9,9 +9,9 @@ const font = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Why Life's Better with a Dog",
+  title: "Paws & Purpose | Your Life With Dogs",
   description:
-    "Discover the emotional, physical, and mental benefits of having a loyal four-legged friend by your side.",
+    "Discover the emotional, physical, and mental benefits of having a loyal four-legged friend by your side. Transform your life with the power of canine companionship.",
 };
 
 export default function RootLayout({
@@ -20,10 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${font.className} antialiased`}>
-        {children}
-        <ScrollToTop />
+    <html lang="en" className="scroll-smooth">
+      <body
+        className={`${font.className} antialiased bg-gray-50 text-gray-900`}
+      >
+        <div className="min-h-screen flex flex-col">
+          {children}
+          <ScrollToTop />
+        </div>
       </body>
     </html>
   );

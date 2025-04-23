@@ -6,8 +6,10 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <div className="relative w-full min-h-screen flex items-center bg-gradient-to-br from-pink-50 to-pink-100 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div className="relative w-full min-h-screen flex items-center bg-gradient-to-br from-pink-50 via-white to-pink-100 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <div className="absolute inset-0 bg-[url('/c/pattern.png')] opacity-5" />
+      
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -15,26 +17,27 @@ export default function Hero() {
           className="space-y-8"
         >
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-            Why do we deserve to have a dog?
+            Transform Your Life with{" "}
+            <span className="text-pink-600">Canine Companionship</span>
           </h1>
           
           <p className="text-lg text-gray-600 max-w-xl">
-            A four-legged companion to fill our days with love, adventures, and
-            endless cuddles. And guess what? I'm going to show you exactly why
-            this makes all the sense in the world.
+            Discover the profound impact a four-legged friend can have on your life. 
+            From unconditional love to daily adventures, experience the joy and purpose 
+            that comes with canine companionship.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Link
               href="#benefits"
-              className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500"
+              className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               Discover Benefits
             </Link>
 
             <Link
               href="#gallery"
-              className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-pink-600 bg-white hover:bg-gray-50 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 border border-pink-200"
+              className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-pink-600 bg-white hover:bg-gray-50 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 border border-pink-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               View Gallery
             </Link>
