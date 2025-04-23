@@ -1,50 +1,62 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-pink-100 via-pink-200 to-pink-300 px-4">
-      <motion.h1
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-4xl sm:text-5xl font-bold text-gray-800"
-      >
-        Why do we deserve to have a dog?
-      </motion.h1>
-
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 0.8 }}
-        className="mt-4 text-lg sm:text-xl text-gray-700 max-w-xl"
-      >
-        A four-legged companion to fill our days with love, adventures, and
-        endless cuddles. And guess what? I'm going to show you exactly why this
-        makes all the sense in the world.
-      </motion.p>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8 }}
-        className="flex flex-col sm:flex-row gap-4 justify-center mt-8"
-      >
-        <Link
-          href="#benefits"
-          className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 transition-colors"
+    <div className="relative w-full min-h-screen flex items-center bg-gradient-to-br from-pink-50 to-pink-100 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="space-y-8"
         >
-          Discover Benefits
-        </Link>
-        <Link
-          href="#gallery"
-          className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-pink-600 bg-white hover:bg-gray-50 transition-colors"
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            Why do we deserve to have a dog?
+          </h1>
+          
+          <p className="text-lg text-gray-600 max-w-xl">
+            A four-legged companion to fill our days with love, adventures, and
+            endless cuddles. And guess what? I'm going to show you exactly why
+            this makes all the sense in the world.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <Link
+              href="#benefits"
+              className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500"
+            >
+              Discover Benefits
+            </Link>
+
+            <Link
+              href="#gallery"
+              className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-pink-600 bg-white hover:bg-gray-50 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 border border-pink-200"
+            >
+              View Gallery
+            </Link>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="mx-auto hidden lg:block pl-10"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
         >
-          View Gallery
-        </Link>
-      </motion.div>
-    </section>
+          <Image
+            src="/c/hero.png"
+            alt="Happy dog"
+            width={780}
+            height={780}
+            className="rounded-2xl"
+            priority
+          />
+        </motion.div>
+      </div>
+    </div>
   );
 }
