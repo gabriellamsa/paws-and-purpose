@@ -1,9 +1,9 @@
-import Benefits from "@/components/benefits/Benefits";
+import Benefits from "@/components/home/Benefits";
 import DogCarousel from "@/components/gallery/DogCarousel";
-import Hero from "@/components/hero/Hero";
+import Hero from "@/components/home/Hero";
 import Navbar from "@/components/navbar/Navbar";
-import Reasons from "@/components/reasons/Reasons";
-import Testimonials from "@/components/testimonials/Testimonials";
+import Reasons from "@/components/home/Reasons";
+import Testimonials from "@/components/home/Testimonials";
 import AdoptPage from "@/components/adopt/AdoptPage";
 
 export default function Home() {

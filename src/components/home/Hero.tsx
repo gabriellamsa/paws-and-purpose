@@ -7,8 +7,6 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <div className="relative w-full min-h-screen flex items-center bg-gradient-to-br from-pink-50 via-white to-pink-100 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/c/pattern.png')] opacity-5" />
-      
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
