@@ -1,8 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isAdoptPage = pathname === "/adopt";
+
   return (
     <footer className="bg-white border-t border-gray-100 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -14,32 +18,34 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex space-x-6">
-            <Link
-              href="#reasons"
-              className="text-gray-600 hover:text-pink-600 transition-colors duration-200"
-            >
-              Reasons
-            </Link>
-            <Link
-              href="#benefits"
-              className="text-gray-600 hover:text-pink-600 transition-colors duration-200"
-            >
-              Benefits
-            </Link>
-            <Link
-              href="#gallery"
-              className="text-gray-600 hover:text-pink-600 transition-colors duration-200"
-            >
-              Gallery
-            </Link>
-            <Link
-              href="#testimonials"
-              className="text-gray-600 hover:text-pink-600 transition-colors duration-200"
-            >
-              Testimonials
-            </Link>
-          </div>
+          {!isAdoptPage && (
+            <div className="flex space-x-6">
+              <Link
+                href="#reasons"
+                className="text-gray-600 hover:text-pink-600 transition-colors duration-200"
+              >
+                Reasons
+              </Link>
+              <Link
+                href="#benefits"
+                className="text-gray-600 hover:text-pink-600 transition-colors duration-200"
+              >
+                Benefits
+              </Link>
+              <Link
+                href="#gallery"
+                className="text-gray-600 hover:text-pink-600 transition-colors duration-200"
+              >
+                Gallery
+              </Link>
+              <Link
+                href="#testimonials"
+                className="text-gray-600 hover:text-pink-600 transition-colors duration-200"
+              >
+                Testimonials
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </footer>
