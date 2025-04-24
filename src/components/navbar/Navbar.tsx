@@ -1,12 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import MobileNav from "./MobileNav";
 import ResponsiveNavbar from "./ResponsiveNavbar";
-import Link from "next/link";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+
+  const showAdoptButton = pathname !== "/adopt";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,17 +39,11 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            <ResponsiveNavbar />
-            <Link
-              href="/adopt"
-              className="ml-4 inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-pink-600 hover:bg-pink-700 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 shadow"
-            >
-              Adopt Me
-            </Link>
+            <ResponsiveNavbar showAdoptButton={showAdoptButton} />
           </div>
 
           <div className="md:hidden">
-            <MobileNav />
+            <MobileNav showAdoptButton={showAdoptButton} />
           </div>
         </div>
       </nav>

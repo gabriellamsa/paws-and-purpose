@@ -11,7 +11,11 @@ const links = [
   { href: "#testimonials", label: "Testimonials" },
 ];
 
-export default function MobileNav() {
+interface MobileNavProps {
+  showAdoptButton: boolean;
+}
+
+export default function MobileNav({ showAdoptButton }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -36,15 +40,17 @@ export default function MobileNav() {
                 </a>
               </li>
             ))}
-            <li>
-              <Link
-                href="/adopt"
-                onClick={() => setIsOpen(false)}
-                className="block text-white text-center bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-lg transition"
-              >
-                Adopt Me
-              </Link>
-            </li>
+            {showAdoptButton && (
+              <li>
+                <Link
+                  href="/adopt"
+                  onClick={() => setIsOpen(false)}
+                  className="block text-white text-center bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-lg transition"
+                >
+                  Adopt Me
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       )}
