@@ -4,6 +4,7 @@ import Hero from "@/components/hero/Hero";
 import Navbar from "@/components/navbar/Navbar";
 import Reasons from "@/components/reasons/Reasons";
 import Testimonials from "@/components/testimonials/Testimonials";
+import AdoptPage from "@/components/adopt/AdoptPage";
 
 export default function Home() {
   return (
@@ -20,4 +21,8 @@ export default function Home() {
       </main>
     </>
   );
+}
+
+export function Adopt() {
+  return <AdoptPage />;
 }
