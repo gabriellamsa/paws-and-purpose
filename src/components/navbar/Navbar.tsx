@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import MobileNav from "./MobileNav";
 import ResponsiveNavbar from "./ResponsiveNavbar";
+import Link from "next/link";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,10 +18,10 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header 
+    <header
       className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? "bg-white/90 backdrop-blur-md shadow-lg" 
+        scrolled
+          ? "bg-white/90 backdrop-blur-md shadow-lg"
           : "bg-white/80 backdrop-blur-md"
       }`}
     >
@@ -33,11 +34,17 @@ export default function Navbar() {
               </span>
             </a>
           </div>
-          
+
           <div className="hidden md:flex items-center space-x-8">
             <ResponsiveNavbar />
+            <Link
+              href="/adopt"
+              className="ml-4 inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-pink-600 hover:bg-pink-700 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 shadow"
+            >
+              Adopt Me
+            </Link>
           </div>
-          
+
           <div className="md:hidden">
             <MobileNav />
           </div>
