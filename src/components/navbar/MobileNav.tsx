@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 const links = [
   { href: "#reasons", label: "Reasons" },
@@ -17,6 +18,30 @@ interface MobileNavProps {
 
 export default function MobileNav({ showAdoptButton }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+  const isAdoptPage = pathname === "/adopt";
+
+  const handleNavigation = (hash: string) => {
+    setIsOpen(false);
+    if (isAdoptPage) {
+      router.push(`/${hash}`);
+
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          const headerOffset = 80; 
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+        }
+      }, 100);
+    }
+  };
 
   return (
     <div className="relative z-50">
@@ -31,13 +56,22 @@ export default function MobileNav({ showAdoptButton }: MobileNavProps) {
           <ul className="space-y-2">
             {links.map((link) => (
               <li key={link.href}>
-                <a
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block text-gray-700 hover:text-pink-600 transition"
-                >
-                  {link.label}
-                </a>
+                {isAdoptPage ? (
+                  <button
+                    onClick={() => handleNavigation(link.href)}
+                    className="block w-full text-left text-gray-700 hover:text-pink-600 transition"
+                  >
+                    {link.label}
+                  </button>
+                ) : (
+                  <a
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block text-gray-700 hover:text-pink-600 transition"
+                  >
+                    {link.label}
+                  </a>
+                )}
               </li>
             ))}
             {showAdoptButton && (
