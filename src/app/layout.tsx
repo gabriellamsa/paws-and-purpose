@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import ScrollToTop from "@/components/helper/ScrollToTop";
+import Footer from "@/components/home/Footer";
 
 const font = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -25,6 +26,7 @@ export default function RootLayout({
         <div className="min-h-screen flex flex-col">
           {children}
           <ScrollToTop />
+          <Footer />
         </div>
       </body>
     </html>
