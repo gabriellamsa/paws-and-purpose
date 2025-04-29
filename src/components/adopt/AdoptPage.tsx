@@ -3,48 +3,13 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Navbar from "../navbar/Navbar";
-
-interface Dog {
-  id: number;
-  name: string;
-  breed: string;
-  image: string;
-}
-
-const dogs: Dog[] = [
-  {
-    id: 1,
-    name: "Sake",
-    breed: "Australian Cattle Dog",
-    image: "/dogs/dog1.jpg",
-  },
-  {
-    id: 2,
-    name: "Café",
-    breed: "Australian Cattle Dog",
-    image: "/dogs/dog2.jpg",
-  },
-  {
-    id: 3,
-    name: "Milo",
-    breed: "Border Collie",
-    image: "/dogs/dog3.jpg",
-  },
-  {
-    id: 4,
-    name: "Caramel",
-    breed: "English Cocker Spaniel",
-    image: "/dogs/dog4.jpg",
-  },
-  {
-    id: 5,
-    name: "Tofu",
-    breed: "Corgi",
-    image: "/dogs/dog5.jpg",
-  },
-];
+import { dogs, Dog } from "./data/dogData";
+import { useState } from "react";
+import QuickView from "./QuickView";
 
 export default function AdoptPage() {
+  const [selectedDog, setSelectedDog] = useState<Dog | null>(null);
+
   return (
     <>
       <Navbar />
@@ -66,7 +31,8 @@ export default function AdoptPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+                onClick={() => setSelectedDog(dog)}
               >
                 <div className="relative w-full h-64">
                   <Image
@@ -92,6 +58,8 @@ export default function AdoptPage() {
           </div>
         </div>
       </main>
+
+      <QuickView dog={selectedDog} onClose={() => setSelectedDog(null)} />
     </>
   );
 }
