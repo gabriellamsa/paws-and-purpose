@@ -4,7 +4,6 @@ import Hero from "@/components/home/Hero";
 import Navbar from "@/components/navbar/Navbar";
 import Reasons from "@/components/home/Reasons";
 import Testimonials from "@/components/home/Testimonials";
-import AdoptPage from "@/components/adopt/AdoptPage";
 
 export default function Home() {
   return (
@@ -21,8 +20,4 @@ export default function Home() {
       </main>
     </>
   );
-}
-
-export function Adopt() {
-  return <AdoptPage />;
 }

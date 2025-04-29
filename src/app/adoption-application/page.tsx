@@ -1,12 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { dogs, Dog } from '@/components/adopt/data/dogData';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function AdoptionApplication() {
+function AdoptionApplicationContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const dogId = searchParams.get('dogId');
@@ -250,17 +250,17 @@ export default function AdoptionApplication() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                <h3 className="text-lg font-medium text-gray-900 mb-2">
                   Application Submitted!
                 </h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-500 mb-4">
                   Thank you for your interest in adopting {selectedDog.name}. We will review your application and contact you soon.
                 </p>
                 <button
                   onClick={handleCloseConfirmation}
-                  className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
-                  Return to Home
+                  Close
                 </button>
               </div>
             </motion.div>
@@ -268,5 +268,13 @@ export default function AdoptionApplication() {
         )}
       </AnimatePresence>
     </>
+  );
+}
+
+export default function AdoptionApplication() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <AdoptionApplicationContent />
+    </Suspense>
   );
 } 
