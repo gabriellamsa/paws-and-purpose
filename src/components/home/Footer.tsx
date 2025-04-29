@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 export default function Footer() {
   const pathname = usePathname();
   const isAdoptPage = pathname === "/adopt";
+  const isAdoptionApplicationPage = pathname === "/adoption-application";
 
   return (
     <footer className="bg-white border-t border-gray-100 mt-20">
@@ -18,7 +19,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {!isAdoptPage && (
+          {!isAdoptPage && !isAdoptionApplicationPage && (
             <div className="flex space-x-6">
               <Link
                 href="#reasons"
