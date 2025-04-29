@@ -6,9 +6,15 @@ import Navbar from "../navbar/Navbar";
 import { dogs, Dog } from "./data/dogData";
 import { useState } from "react";
 import QuickView from "./QuickView";
+import { useRouter } from "next/navigation";
 
 export default function AdoptPage() {
   const [selectedDog, setSelectedDog] = useState<Dog | null>(null);
+  const router = useRouter();
+
+  const handleChooseMe = (dog: Dog) => {
+    router.push(`/adoption-application?dogId=${dog.id}`);
+  };
 
   return (
     <>
@@ -49,7 +55,13 @@ export default function AdoptPage() {
                     {dog.name}
                   </h2>
                   <p className="text-gray-600 mb-6">{dog.breed}</p>
-                  <button className="w-full px-6 py-3 text-base font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500">
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleChooseMe(dog);
+                    }}
+                    className="w-full px-6 py-3 text-base font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500"
+                  >
                     Choose Me
                   </button>
                 </div>

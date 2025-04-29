@@ -1,5 +1,5 @@
 export interface Dog {
-  id: number;
+  id: string;
   name: string;
   breed: string;
   image: string;
@@ -10,7 +10,7 @@ export interface Dog {
 
 export const dogs: Dog[] = [
   {
-    id: 1,
+    id: "1",
     name: "Sake",
     breed: "Australian Cattle Dog",
     image: "/dogs/dog1.jpg",
@@ -20,7 +20,7 @@ export const dogs: Dog[] = [
     idealFor: "Active families or individuals who enjoy walks and adventures. Gets along well with other medium-sized dogs, especially active ones.",
   },
   {
-    id: 2,
+    id: "2",
     name: "Café",
     breed: "Australian Cattle Dog",
     image: "/dogs/dog2.jpg",
@@ -30,7 +30,7 @@ export const dogs: Dog[] = [
     idealFor: "People with time and patience to raise a pup. Can live with other pets if socialized from a young age.",
   },
   {
-    id: 3,
+    id: "3",
     name: "Milo",
     breed: "Border Collie",
     image: "/dogs/dog3.jpg",
@@ -40,7 +40,7 @@ export const dogs: Dog[] = [
     idealFor: "Peaceful homes, calm adults, or older individuals. Friendly with other animals and appreciates a quiet environment.",
   },
   {
-    id: 4,
+    id: "4",
     name: "Caramel",
     breed: "English Cocker Spaniel",
     image: "/dogs/dog4.jpg",
@@ -50,7 +50,7 @@ export const dogs: Dog[] = [
     idealFor: "Families with children or anyone who enjoys affectionate dogs. Very sociable and friendly with other dogs.",
   },
   {
-    id: 5,
+    id: "5",
     name: "Tofu",
     breed: "Corgi",
     image: "/dogs/dog5.jpg",
