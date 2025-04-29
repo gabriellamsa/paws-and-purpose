@@ -1,79 +1,69 @@
 # 🐾 Paws & Purpose
 
-<div align="center">
+A modern, responsive web application built with Next.js and React, designed to connect pet lovers with their perfect companions.
 
-![Next.js](https://img.shields.io/badge/Next.js-15.3.1-black?style=for-the-badge&logo=next.js)
-![React](https://img.shields.io/badge/React-19.0.0-blue?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-blue?style=for-the-badge&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0.0-38B2AC?style=for-the-badge&logo=tailwind-css)
+## 🚀 Features
 
-</div>
-
-## ✨ Overview
-
-A modern, responsive landing page built with cutting-edge technologies to showcase why adopting a dog would be the perfect addition to our lives. This project demonstrates clean UI design, component architecture, and frontend best practices.
+- **Modern UI/UX**: Built with Tailwind CSS and Framer Motion for smooth animations
+- **Responsive Design**: Works seamlessly across all devices
+- **Type-Safe**: Built with TypeScript for better development experience
+- **Performance Optimized**: Utilizing Next.js and Turbopack for blazing fast development
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Next.js 15
-- **UI Library:** React 19
-- **Styling:** Tailwind CSS 4
-- **Type Safety:** TypeScript
-- **Animations:** Framer Motion
-- **Icons:** Lucide Icons
+- **Framework**: Next.js 15.3.1
+- **Language**: TypeScript
+- **UI Library**: React 19
+- **Styling**: Tailwind CSS 4
+- **Animations**: Framer Motion
+- **Carousel**: Keen Slider
+- **Icons**: Lucide React
 
-## 🎨 Features
+## 📦 Installation
 
-- 🎯 Fully responsive design
-- ✨ Smooth animations and transitions
-- 📱 Mobile-first approach
-- 🧩 Modular component architecture
-- 🚀 Optimized performance
-- 🎭 Interactive UI elements
+1. Clone the repository:
 
-## 🚀 Quick Start
-
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/yourusername/paws-and-purpose.git
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   npm install
-   ```
-
-3. **Start development server**
-
-   ```bash
-   npm run dev
-   ```
-
-4. **Open** [http://localhost:3000](http://localhost:3000) in your browser
-
-## 📁 Project Structure
-
-```
-src/
-├── components/     # Reusable UI components
-├── public/        # Static assets
-└── styles/        # Global styles and Tailwind config
+```bash
+git clone https://github.com/yourusername/paws-and-purpose.git
 ```
 
-## 🎯 Project Goals
+2. Install dependencies:
 
-- Create an engaging and professional landing page
-- Demonstrate modern web development practices
-- Showcase the benefits of pet adoption
-- Implement smooth animations and transitions
-- Ensure optimal performance across devices
+```bash
+cd paws-and-purpose
+npm install
+```
 
----
+3. Run the development server:
 
-<div align="center">
+```bash
+npm run dev
+```
 
-Made with ❤️ by [Gabriella Andrade](https://github.com/gabriellamsa)
+The application will be available at `http://localhost:3000`
 
-</div>
+## 🏗️ Project Structure
+
+```
+paws-and-purpose/
+├── src/
+│   ├── app/          # Next.js app directory
+│   └── components/   # Reusable React components
+├── public/           # Static assets
+└── ...
+```
+
+## 🧪 Available Scripts
+
+- `npm run dev`: Start development server with Turbopack
+- `npm run build`: Build the application for production
+- `npm run start`: Start the production server
+- `npm run lint`: Run ESLint for code quality checks
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
