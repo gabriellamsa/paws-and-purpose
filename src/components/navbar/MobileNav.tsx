@@ -26,20 +26,19 @@ export default function MobileNav({ showAdoptButton }: MobileNavProps) {
     setIsOpen(false);
     if (isAdoptPage) {
       router.push(`/${hash}`);
+      return;
+    }
 
-      setTimeout(() => {
-        const element = document.querySelector(hash);
-        if (element) {
-          const headerOffset = 80; 
-          const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    const element = document.querySelector(hash);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-          });
-        }
-      }, 100);
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     }
   };
 
