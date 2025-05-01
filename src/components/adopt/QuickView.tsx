@@ -14,14 +14,14 @@ export default function QuickView({ dog, onClose }: QuickViewProps) {
     <AnimatePresence>
       {dog && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/40"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 overflow-y-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
         >
           <motion.div
-            className="bg-white rounded-xl max-w-2xl w-full p-6 relative"
+            className="bg-white rounded-xl max-w-2xl w-full mx-4 my-8 p-4 sm:p-6 relative"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
@@ -29,18 +29,18 @@ export default function QuickView({ dog, onClose }: QuickViewProps) {
           >
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 text-gray-400 hover:text-pink-600 transition"
+              className="absolute top-4 right-4 text-gray-400 hover:text-pink-600 transition z-10"
             >
               ✕
             </button>
             <div className="flex flex-col md:flex-row gap-6">
-              <div className="relative w-full md:w-1/2 h-64">
+              <div className="relative w-full md:w-1/2 h-48 sm:h-64">
                 <Image
                   src={dog.image}
                   alt={dog.name}
                   fill
                   className="rounded-xl object-cover"
-                  sizes="100%"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <div className="md:w-1/2 space-y-4">
