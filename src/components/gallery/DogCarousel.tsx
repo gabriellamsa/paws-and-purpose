@@ -4,12 +4,26 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+// Array fixo com todas as imagens dos cães
 const dogImages = [
   "/dogs/dog1.jpg",
   "/dogs/dog2.jpg",
   "/dogs/dog3.jpg",
   "/dogs/dog4.jpg",
   "/dogs/dog5.jpg",
+  "/dogs/dog6.jpg",
+  "/dogs/dog7.jpg",
+  "/dogs/dog8.jpg",
+  "/dogs/dog9.jpg",
+  "/dogs/dog10.jpg",
+  "/dogs/dog11.jpg",
+  "/dogs/dog12.jpg",
+  "/dogs/dog13.jpg",
+  "/dogs/dog14.jpg",
+  "/dogs/dog15.jpg",
+  "/dogs/dog16.jpg",
+  "/dogs/dog17.jpg",
+  "/dogs/dog18.jpg"
 ];
 
 export default function DogCarousel() {
