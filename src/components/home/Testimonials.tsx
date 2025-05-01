@@ -50,6 +50,7 @@ export default function Testimonials() {
                     alt={testimonial.name}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 48px, 48px"
                   />
                 </div>
                 <div>

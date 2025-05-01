@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Array fixo com todas as imagens dos cães
 const dogImages = [
   "/dogs/dog1.jpg",
   "/dogs/dog2.jpg",
@@ -72,8 +71,9 @@ export default function DogCarousel() {
                 alt={`Dog ${current + 1}`}
                 fill
                 className="object-cover"
-                sizes="100vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 1200px"
                 priority
+                quality={90}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </motion.div>
